@@ -1,0 +1,171 @@
+Web Scraping Based AI Chatbot (Console Application)
+
+A Python-based console chatbot that scrapes website content and uses OpenAI GPT models to answer user queries strictly based on the scraped data.
+
+This project demonstrates the integration of web scraping, prompt engineering, and LLM-based conversational AI.
+
+📌 Features
+
+🌐 Scrapes live website content using requests and BeautifulSoup
+
+🧹 Cleans and preprocesses HTML data automatically
+
+🤖 Initializes ChatGPT with website context
+
+💬 Interactive console-based chatbot
+
+🔒 Answers only from website data (no hallucination)
+
+🚫 Gracefully handles errors (invalid URLs, API issues, etc.)
+
+⚡ Limits content size to avoid token overflow
+
+🛠️ Tech Stack
+
+Programming Language: Python 3.8+
+
+Libraries Used:
+
+openai
+
+requests
+
+beautifulsoup4
+
+re
+
+Model Used: gpt-4o
+
+📂 Project Structure
+Web-Scraping-Chatbot/
+│
+├── chatbot.py          # Main application file
+├── README.md           # Project documentation
+└── requirements.txt    # Required dependencies
+
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/web-scraping-chatbot.git
+cd web-scraping-chatbot
+
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+
+
+requirements.txt
+
+openai
+requests
+beautifulsoup4
+
+🔑 API Configuration
+
+Open the Python file and add your OpenAI API key:
+
+client = OpenAI(
+    api_key="YOUR_API_KEY_HERE"
+)
+
+
+⚠️ Important:
+Never upload your API key to GitHub. Use environment variables for production.
+
+▶️ How to Run the Project
+python chatbot.py
+
+Console Flow:
+
+Enter a website URL (or press Enter for default)
+
+Website content is scraped and analyzed
+
+Chatbot starts interaction
+
+Ask questions related to the website
+
+Type exit or quit to stop
+
+💡 Example Interaction
+Enter the website URL to scrape:
+https://botpenguin.com/
+
+Jarvis: Hi! I have analyzed the website.
+Ask me anything about it!
+
+You: What services does this website provide?
+Jarvis: The website offers AI chatbot solutions for businesses...
+
+🧠 How It Works (Architecture)
+Step-by-Step Flow:
+
+Website Scraping
+
+Fetches HTML using requests
+
+Parses content using BeautifulSoup
+
+Removes scripts, styles, headers, footers
+
+Text Cleaning
+
+Removes extra spaces
+
+Limits text to 3000 words
+
+Context Injection
+
+Website content is added as a system message
+
+ChatGPT is instructed to answer strictly from this data
+
+Conversation Loop
+
+User questions are appended to chat history
+
+GPT generates contextual responses
+
+🚧 Limitations
+
+Cannot answer questions outside website content
+
+Console-based UI (no web UI)
+
+Depends on website accessibility
+
+Token limits for very large websites
+
+🚀 Future Enhancements
+
+🌍 Web UI using Gradio / Streamlit
+
+📄 PDF & multiple page scraping
+
+🔍 Semantic search using embeddings
+
+🧠 Vector database (FAISS / Pinecone)
+
+🗂️ Multi-website support
+
+🔐 Environment-based API key handling
+
+🎓 Use Cases
+
+College Major / Minor Project
+
+AI + Web Scraping Demonstration
+
+Knowledge-based Chatbots
+
+Company websites Q&A bot
+
+Interview project discussion
+
+📄 License
+
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute it.
+
+🙌 Author
+
+Aryan Kumar
+B.Tech CSE | AI & Data Science Enthusiast
